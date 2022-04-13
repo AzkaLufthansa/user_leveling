@@ -39,6 +39,7 @@ class PermissionDemoSeeder extends Seeder
         // create demo users
         $user = User::factory()->create([
             'name' => 'Example member user',
+            'username' => 'azkamember',
             'email' => 'member@gmail.com',
             'password' => bcrypt('12345678')
         ]);
@@ -46,6 +47,7 @@ class PermissionDemoSeeder extends Seeder
 
         $user = User::factory()->create([
             'name' => 'Example admin user',
+            'username' => 'azkaadmin',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('12345678')
         ]);
@@ -53,6 +55,7 @@ class PermissionDemoSeeder extends Seeder
 
         $user = User::factory()->create([
             'name' => 'Example superadmin user',
+            'username' => 'azkasuperadmin',
             'email' => 'superadmin@qadrlabs.com',
             'password' => bcrypt('12345678')
         ]);

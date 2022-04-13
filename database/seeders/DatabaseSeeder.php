@@ -18,30 +18,30 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        User::create([
-            'role_id' => 1,
-            'name' => 'Muhammad Azka Lufthansa',
-            'username' => 'azkalufthansa',
-            'email' => 'azkalufthansa3@gmail.com',
-            'password' => bcrypt('12345'),
-            // 'role' => 'admin'
-        ]);
+        // User::create([
+        //     'role_id' => 1,
+        //     'name' => 'Muhammad Azka Lufthansa',
+        //     'username' => 'azkalufthansa',
+        //     'email' => 'azkalufthansa3@gmail.com',
+        //     'password' => bcrypt('12345'),
+        //     // 'role' => 'admin'
+        // ]);
 
-        User::create([
-            'role_id' => 2,
-            'name' => 'Ilham Kurniawan',
-            'username' => 'ilhamkurniawan',
-            'email' => 'ilhamkurniawan@gmail.com',
-            'password' => bcrypt('12345'),
-            // 'role' => 'member'
-        ]);
+        // User::create([
+        //     'role_id' => 2,
+        //     'name' => 'Ilham Kurniawan',
+        //     'username' => 'ilhamkurniawan',
+        //     'email' => 'ilhamkurniawan@gmail.com',
+        //     'password' => bcrypt('12345'),
+        //     // 'role' => 'member'
+        // ]);
 
-        Role::create([
-            'role' => 'Admin'
-        ]);
+        // Role::create([
+        //     'role' => 'Admin'
+        // ]);
 
-        Role::create([
-            'role' => 'Member'
-        ]);
+        // Role::create([
+        //     'role' => 'Member'
+        // ]);
     }
 }

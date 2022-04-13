@@ -23,8 +23,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth']);
-Route::get('/users', [DashboardController::class, 'users'])->middleware(['auth']);
-Route::get('/profile', [DashboardController::class, 'profile'])->middleware(['auth']);
-Route::get('/editProfile', [DashboardController::class, 'editProfile'])->middleware(['auth']);
-
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/users', [DashboardController::class, 'users'])->middleware('auth');
+Route::get('/profile', [DashboardController::class, 'profile'])->middleware('auth');
+Route::get('/editProfile', [DashboardController::class, 'editProfile'])->middleware('auth');
