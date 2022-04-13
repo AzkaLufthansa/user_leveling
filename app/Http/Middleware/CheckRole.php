@@ -20,7 +20,7 @@ class CheckRole
         $roles = array_slice(func_get_args(), 2);
 
         foreach ($roles as $role) { 
-            $user = auth()->user()->role->role;
+            $user = auth()->user()->role;
             if( $user == $role){
                 return $next($request);
             }

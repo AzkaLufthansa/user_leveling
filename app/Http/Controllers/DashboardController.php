@@ -7,6 +7,12 @@ use App\Models\User;
 
 class DashboardController extends Controller
 {
+    public function __construct()
+    {
+        // $this->middleware('permission:admin menu', ['only' => ['index', 'profile', 'editProfile', 'users']]);
+        // $this->middleware('permission:member menu', ['only' => ['profile', 'editProfile']]);
+    }
+
     public function index()
     {
         return view('dashboard.index');

@@ -2,7 +2,7 @@
     <div class="position-sticky pt-3">
         <ul class="nav flex-column">
             
-        {{-- @role('admin') --}}
+        @can('admin menu', DashboardController::class)
             <li class="nav-item">
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-2 mb-2 text-muted">
                     <span>Admin</span>
@@ -14,11 +14,13 @@
                 <a class="nav-link pb-3 border-bottom {{ Request::is('users') ? 'active' : '' }}" aria-current="page" href="/users">
                     <span data-feather="users"></span>
                 Users
-                </a>
-            </li>
-        {{-- @role('member') --}}
+            </a>
+        </li>
+        @endcan
+        
+        @can('member menu', DashboardController::class)
             <li class="nav-item">
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-3 mb-2 text-muted">
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-2 mb-2 text-muted">
                     <span>User</span>
                 </h6>
                 <a class="nav-link pb-3 {{ Request::is('profile') ? 'active' : '' }}" aria-current="page" href="/profile">
@@ -30,6 +32,7 @@
                 Edit Profile
                 </a>
             </li>
+        @endcan
 
             <li class="nav-item">
                 <a class="nav-link border-bottom pb-3 mt-3" aria-current="page" href="#">

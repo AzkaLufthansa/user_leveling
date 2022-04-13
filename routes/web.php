@@ -18,13 +18,13 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'checkRole:Admin']);
-Route::get('/users', [DashboardController::class, 'users'])->middleware(['auth', 'checkRole:Admin']);
-Route::get('/profile', [DashboardController::class, 'profile'])->middleware(['auth', 'checkRole:Admin,Member']);
-Route::get('/editProfile', [DashboardController::class, 'editProfile'])->middleware(['auth', 'checkRole:Admin,Member']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/users', [DashboardController::class, 'users'])->middleware('auth');
+Route::get('/profile', [DashboardController::class, 'profile'])->middleware('auth');
+Route::get('/editProfile', [DashboardController::class, 'editProfile'])->middleware('auth');
 
