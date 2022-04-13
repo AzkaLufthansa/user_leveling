@@ -2,6 +2,7 @@
     <div class="position-sticky pt-3">
         <ul class="nav flex-column">
             
+        {{-- @role('admin') --}}
             <li class="nav-item">
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-2 mb-2 text-muted">
                     <span>Admin</span>
@@ -15,6 +16,7 @@
                 Users
                 </a>
             </li>
+        {{-- @role('member') --}}
             <li class="nav-item">
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-3 mb-2 text-muted">
                     <span>User</span>
